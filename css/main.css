@@ -1094,6 +1094,7 @@ pre .javascript .function {
 }
 .header-inner {
   position: relative;
+  box-shadow: 2px 2px 15px 2px #ccc !important;
 }
 .headband {
   height: 3px;
@@ -1693,6 +1694,8 @@ pre .javascript .function {
   padding: 20px 10px;
   color: #999;
   text-align: center;
+  box-shadow: 2px 2px 15px 2px #ccc;
+  margin-top: 10px;
 }
 .site-overview-wrap {
   overflow: hidden;
@@ -1824,7 +1827,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1f61ff;
+  background: #f795ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2679,7 +2682,7 @@ pre .javascript .function {
   width: 700px;
   background: #fff;
   min-height: 700px;
-  box-shadow: initial;
+  box-shadow: 2px 2px 15px 2px #ccc;
   border-radius: initial;
 }
 @media (min-width: 768px) and (max-width: 991px) {
