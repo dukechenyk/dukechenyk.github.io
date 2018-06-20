@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.dukevs.cn/"/>
-  <updated>2018-06-19T15:30:52.405Z</updated>
+  <updated>2018-06-20T14:27:47.585Z</updated>
   <id>http://www.dukevs.cn/</id>
   
   <author>
@@ -17,9 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>WordPress无插件禁止登陆admin用户名账户</title>
+    <link href="http://www.dukevs.cn/wordpressadmincont.html"/>
+    <id>http://www.dukevs.cn/wordpressadmincont.html</id>
+    <published>2018-06-20T14:15:07.000Z</published>
+    <updated>2018-06-20T14:27:47.585Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="WordPress无插件禁止登陆admin用户名账户"><a href="#WordPress无插件禁止登陆admin用户名账户" class="headerlink" title="WordPress无插件禁止登陆admin用户名账户"></a>WordPress无插件禁止登陆admin用户名账户</h2><p>早些时候如果我们有创建WordPress站点的时候默认是需要创建admin用户名的，包括我们一些公司的老的企业网站，他们默认都还是这个用户名。但是由于安全的考虑，准备将屏蔽用户名是admin的登录和扫描，不过如果我们是新WordPress建站的，应该不会用admin用户名。安装向导是可以设置自定义用户名。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//WP禁止admin用户名</span><br><span class="line">add_filter( <span class="string">'wp_authenticate'</span>, <span class="string">'wp_no_admin_user'</span> );</span><br><span class="line"><span class="keyword">function</span> wp_no_admin_user(<span class="variable">$user</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$user</span> == <span class="string">'admin'</span>)&#123;</span><br><span class="line"><span class="built_in">exit</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">add_filter(<span class="string">'sanitize_user'</span>, <span class="string">'wp_sanitize_user_no_admin'</span>,10,3);</span><br><span class="line"><span class="keyword">function</span> wp_sanitize_user_no_admin(<span class="variable">$username</span>, <span class="variable">$raw_username</span>, <span class="variable">$strict</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$raw_username</span> == <span class="string">'admin'</span> || <span class="variable">$username</span> == <span class="string">'admin'</span>)&#123;</span><br><span class="line"><span class="built_in">exit</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> <span class="variable">$username</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>将代码加入到当前主题Functions.php文件中。就可以屏蔽如果用admin输入用户名登入账户。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;WordPress无插件禁止登陆admin用户名账户&quot;&gt;&lt;a href=&quot;#WordPress无插件禁止登陆admin用户名账户&quot; class=&quot;headerlink&quot; title=&quot;WordPress无插件禁止登陆admin用户名账户&quot;&gt;&lt;/a&gt;WordPres
+      
+    
+    </summary>
+    
+    
+      <category term="wordpress" scheme="http://www.dukevs.cn/tags/wordpress/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PHP 7.1 的 A non-numeric value encountered 错误和解决方法</title>
-    <link href="http://www.dukevs.cn/2018/06/19/phpencounterederror/"/>
-    <id>http://www.dukevs.cn/2018/06/19/phpencounterederror/</id>
+    <link href="http://www.dukevs.cn/phpencounterederror.html"/>
+    <id>http://www.dukevs.cn/phpencounterederror.html</id>
     <published>2018-06-19T15:28:12.000Z</published>
     <updated>2018-06-19T15:30:52.405Z</updated>
     
@@ -41,8 +64,8 @@
   
   <entry>
     <title>设置WordPress回复评论无插件微信提醒功能</title>
-    <link href="http://www.dukevs.cn/2018/06/19/wordwechatplugin/"/>
-    <id>http://www.dukevs.cn/2018/06/19/wordwechatplugin/</id>
+    <link href="http://www.dukevs.cn/wordwechatplugin.html"/>
+    <id>http://www.dukevs.cn/wordwechatplugin.html</id>
     <published>2018-06-19T15:21:20.000Z</published>
     <updated>2018-06-19T15:27:29.758Z</updated>
     
@@ -64,8 +87,8 @@
   
   <entry>
     <title>每天一个WordPress文件：wp-includes/default-constants</title>
-    <link href="http://www.dukevs.cn/2018/06/16/defaulecon/"/>
-    <id>http://www.dukevs.cn/2018/06/16/defaulecon/</id>
+    <link href="http://www.dukevs.cn/defaulecon.html"/>
+    <id>http://www.dukevs.cn/defaulecon.html</id>
     <published>2018-06-16T15:02:35.000Z</published>
     <updated>2018-06-17T11:57:54.054Z</updated>
     
@@ -87,8 +110,8 @@
   
   <entry>
     <title>WordPress 技巧：创建博客时不创建 links 表</title>
-    <link href="http://www.dukevs.cn/2018/06/16/linktable/"/>
-    <id>http://www.dukevs.cn/2018/06/16/linktable/</id>
+    <link href="http://www.dukevs.cn/linktable.html"/>
+    <id>http://www.dukevs.cn/linktable.html</id>
     <published>2018-06-16T15:00:17.000Z</published>
     <updated>2018-06-16T15:01:53.329Z</updated>
     
@@ -110,8 +133,8 @@
   
   <entry>
     <title>WordPress 技巧：强制设置二级分类</title>
-    <link href="http://www.dukevs.cn/2018/06/16/secondcate/"/>
-    <id>http://www.dukevs.cn/2018/06/16/secondcate/</id>
+    <link href="http://www.dukevs.cn/secondcate.html"/>
+    <id>http://www.dukevs.cn/secondcate.html</id>
     <published>2018-06-16T14:57:41.000Z</published>
     <updated>2018-06-16T14:59:33.675Z</updated>
     
@@ -133,8 +156,8 @@
   
   <entry>
     <title>node+express+vue+mongodb实现前后端交互</title>
-    <link href="http://www.dukevs.cn/2018/06/16/nodeexpress/"/>
-    <id>http://www.dukevs.cn/2018/06/16/nodeexpress/</id>
+    <link href="http://www.dukevs.cn/nodeexpress.html"/>
+    <id>http://www.dukevs.cn/nodeexpress.html</id>
     <published>2018-06-15T16:22:52.000Z</published>
     <updated>2018-06-15T16:25:39.829Z</updated>
     
@@ -156,8 +179,8 @@
   
   <entry>
     <title>Github删除所有提交历史记录</title>
-    <link href="http://www.dukevs.cn/2018/06/16/githubdelet/"/>
-    <id>http://www.dukevs.cn/2018/06/16/githubdelet/</id>
+    <link href="http://www.dukevs.cn/githubdelet.html"/>
+    <id>http://www.dukevs.cn/githubdelet.html</id>
     <published>2018-06-15T16:02:23.000Z</published>
     <updated>2018-06-15T16:12:08.276Z</updated>
     
@@ -179,8 +202,8 @@
   
   <entry>
     <title>Github常用命令(陆续更新)</title>
-    <link href="http://www.dukevs.cn/2018/06/12/Github-commend/"/>
-    <id>http://www.dukevs.cn/2018/06/12/Github-commend/</id>
+    <link href="http://www.dukevs.cn/Github-commend.html"/>
+    <id>http://www.dukevs.cn/Github-commend.html</id>
     <published>2018-06-12T15:06:51.000Z</published>
     <updated>2018-06-12T15:10:15.834Z</updated>
     
