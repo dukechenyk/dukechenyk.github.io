@@ -1221,6 +1221,11 @@ pre .javascript .function {
 .use-motion .menu-item {
   opacity: 0;
 }
+.posts-images img {
+  width: 100%;
+  box-shadow: 2px 2px 15px 4px #ccc;
+  margin-bottom: 20px;
+}
 .post-body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -1826,7 +1831,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #58dd79;
+  background: #ffff36;
 }
 .links-of-blogroll {
   font-size: 13px;
