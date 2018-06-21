@@ -1097,34 +1097,10 @@ pre .javascript .function {
   box-shadow: 2px 2px 15px 2px #ccc !important;
 }
 .headband {
-  height: 200px;
+  height: 3px;
   margin-bottom: 35px;
-  line-height: 0;
   width: 100%;
-  background: url("/images/banner.jpg") #fff;
-  overflow: hidden;
-}
-.headband .headband-box {
-  position: relative;
-  width: 100%;
-  padding-top: 30px;
-}
-.headband .headband-box img {
-  width: 90px;
-  height: 90px;
-  max-width: 100%;
-  border-radius: 50%;
-}
-.headband .headband-box .headh2 {
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
-  text-shadow: 2px 2px 5px #ccc;
-}
-.center-block {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  background: #ec484b;
 }
 .site-meta {
   margin: 0;
@@ -1246,10 +1222,36 @@ pre .javascript .function {
 .use-motion .menu-item {
   opacity: 0;
 }
-.posts-images img {
-  width: 100%;
+.posts-images {
+  height: 200px;
   box-shadow: 2px 2px 15px 4px #ccc;
   margin-bottom: 20px;
+  line-height: 0;
+  width: 100%;
+  background: url("/images/head-img.jpg") #fff;
+  overflow: hidden;
+}
+.posts-images .headband-box {
+  position: relative;
+  width: 100%;
+  padding-top: 30px;
+}
+.posts-images .headband-box img {
+  width: 90px;
+  height: 90px;
+  max-width: 100%;
+  border-radius: 50%;
+}
+.posts-images .headband-box .headh2 {
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+  text-shadow: 2px 2px 5px #ccc;
+}
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 .post-body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -1856,7 +1858,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #755b14;
+  background: #900f4d;
 }
 .links-of-blogroll {
   font-size: 13px;
