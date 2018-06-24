@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.dukevs.cn/"/>
-  <updated>2018-06-23T13:51:22.328Z</updated>
+  <updated>2018-06-24T11:44:29.469Z</updated>
   <id>http://www.dukevs.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Homebrew - 安装与使用</title>
+    <link href="http://www.dukevs.cn/usehomebrew.html"/>
+    <id>http://www.dukevs.cn/usehomebrew.html</id>
+    <published>2018-06-24T11:32:09.000Z</published>
+    <updated>2018-06-24T11:44:29.469Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Homebrew-安装与使用"><a href="#Homebrew-安装与使用" class="headerlink" title="Homebrew - 安装与使用"></a>Homebrew - 安装与使用</h2><blockquote><p>1.Homebrew是什么？</p></blockquote><p>Homebrew是以最简单，最灵活的方式来安装苹果公司在MacOS中不包含的UNIX工具。<br>官网：传送门[<a href="https://brew.sh/index_zh-cn.html]" target="_blank" rel="noopener">https://brew.sh/index_zh-cn.html]</a><br>Git仓库地址：传送门[<a href="https://github.com/Homebrew/brew/]" target="_blank" rel="noopener">https://github.com/Homebrew/brew/]</a></p><blockquote><p>2.Homebrew 怎么安装 ？怎么卸载 ？</p></blockquote><blockquote><blockquote><p>安装，打开终端，复制粘贴，大约1分钟左右，下载完成，过程中需要输入密码，其他无需任何操作：</p></blockquote></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure><blockquote><blockquote><p>卸载，有安装就要有卸载，打开终端，复制粘贴： </p></blockquote></blockquote><p>其实只用把上面安装的install换成uninstall就行了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)</span>"</span></span><br></pre></td></tr></table></figure><blockquote><p>3.Homebrew 怎么使用？常用命令有哪些？</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">安装软件，如：brew install oclint</span><br><span class="line">卸载软件，如：brew uninstall oclint</span><br><span class="line">搜索软件，如：brew search oclint</span><br><span class="line">更新软件，如：brew upgrade oclint</span><br><span class="line">查看安装列表， 如：brew list</span><br><span class="line">更新Homebrew，如：brew update</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Homebrew-安装与使用&quot;&gt;&lt;a href=&quot;#Homebrew-安装与使用&quot; class=&quot;headerlink&quot; title=&quot;Homebrew - 安装与使用&quot;&gt;&lt;/a&gt;Homebrew - 安装与使用&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;1.Hom
+      
+    
+    </summary>
+    
+    
+      <category term="hemebrew" scheme="http://www.dukevs.cn/tags/hemebrew/"/>
+    
+  </entry>
   
   <entry>
     <title>WooCommerce 是什么？</title>
