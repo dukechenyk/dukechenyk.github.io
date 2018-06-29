@@ -940,9 +940,9 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 20px;
   font-size: 14px;
-  color: #555;
+  color: #ec484b;
   background: #fff;
-  border: 2px solid #555;
+  border: 2px solid #ec484b;
   text-decoration: none;
   border-radius: 2px;
   transition-property: background-color;
@@ -952,9 +952,9 @@ pre .javascript .function {
   line-height: 2;
 }
 .btn:hover {
-  border-color: #222;
+  border-color: #ec484b;
   color: #fff;
-  background: #222;
+  background: #ec484b;
 }
 .btn +.btn {
   margin: 0 0 8px 8px;
@@ -1507,7 +1507,7 @@ pre .javascript .function {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #ec484b;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
@@ -1858,7 +1858,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ecdb58;
+  background: #60a68e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3023,10 +3023,30 @@ pre .javascript .function {
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   border-radius: initial;
+  transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+}
+.post-block:hover {
+  padding: 40px;
+  background: #fff;
+  box-shadow: 2px 2px 15px 4px rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
+  border-radius: initial;
 }
 #posts > article + article .post-block {
   margin-top: 12px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
+  border-radius: initial;
+  transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+}
+#posts > article + article .post-block:hover {
+  padding: 40px;
+  background: #fff;
+  box-shadow: 2px 2px 15px 4px rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   border-radius: initial;
 }
 .comments {
