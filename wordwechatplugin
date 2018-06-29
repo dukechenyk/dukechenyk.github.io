@@ -85,7 +85,7 @@
 <meta name="keywords" content="wordpress wechat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设置WordPress回复评论无插件微信提醒功能">
-<meta property="og:url" content="http://www.dukevs.cn/wordwechatplugin.html">
+<meta property="og:url" content="http://www.dukevs.cn/wordwechatplugin">
 <meta property="og:site_name" content="duek">
 <meta property="og:description" content="设置WordPress回复评论无插件微信提醒功能如果我们在使用WordPress程序建站的时候，和网友进行互动一般是通过评论。能在第一时间给网友评论确实可以提高交互及时性。常见的我们有直接在每天看看是否有人评论，或者是用邮件提醒。但是有些时候由于服务器的问题，设置邮件提醒可能比较麻烦。这里我们可以使用微信提醒。 这里我们是使用的Server酱接口进行提醒的。 第一、申请接口1申请账号：http:/">
 <meta property="og:locale" content="zh-Hans">
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://www.dukevs.cn/wordwechatplugin.html"/>
+  <link rel="canonical" href="http://www.dukevs.cn/wordwechatplugin"/>
 
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.dukevs.cn/wordwechatplugin.html">
+    <link itemprop="mainEntityOfPage" href="http://www.dukevs.cn/wordwechatplugin">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="duke blog">
@@ -313,9 +313,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/wordwechatplugin.html#comments" itemprop="discussionUrl">
+                <a href="/wordwechatplugin#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="wordwechatplugin.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="wordwechatplugin" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -380,7 +380,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/defaulecon.html" rel="next" title="每天一个WordPress文件：wp-includes/default-constants">
+              <a href="/defaulecon" rel="next" title="每天一个WordPress文件：wp-includes/default-constants">
                 <i class="fa fa-chevron-left"></i> 每天一个WordPress文件：wp-includes/default-constants
               </a>
             
@@ -390,7 +390,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/phpencounterederror.html" rel="prev" title="PHP 7.1 的 A non-numeric value encountered 错误和解决方法">
+              <a href="/phpencounterederror" rel="prev" title="PHP 7.1 的 A non-numeric value encountered 错误和解决方法">
                 PHP 7.1 的 A non-numeric value encountered 错误和解决方法 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -479,7 +479,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -492,7 +492,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -703,8 +703,8 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://www.dukevs.cn/wordwechatplugin.html';
-          this.page.identifier = 'wordwechatplugin.html';
+          this.page.url = 'http://www.dukevs.cn/wordwechatplugin';
+          this.page.identifier = 'wordwechatplugin';
           this.page.title = '设置WordPress回复评论无插件微信提醒功能';
         };
         var d = document, s = d.createElement('script');

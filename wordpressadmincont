@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="node, express, vue, mongodb," />
+  <meta name="keywords" content="wordpress," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="node+express+vue+mongodb实现前后端交互准备用vue-cli脚手架生成生12npm install -g @vue/cliinit &amp;lt;template&amp;gt; &amp;lt;app-name&amp;gt; 从一个远程模板生成一个项目 (遗留 API, 依赖 `@vue/cli-init`)">
-<meta name="keywords" content="node, express, vue, mongodb">
+<meta name="description" content="WordPress无插件禁止登陆admin用户名账户早些时候如果我们有创建WordPress站点的时候默认是需要创建admin用户名的，包括我们一些公司的老的企业网站，他们默认都还是这个用户名。但是由于安全的考虑，准备将屏蔽用户名是admin的登录和扫描，不过如果我们是新WordPress建站的，应该不会用admin用户名。安装向导是可以设置自定义用户名。 12345678910111213141">
+<meta name="keywords" content="wordpress">
 <meta property="og:type" content="article">
-<meta property="og:title" content="node+express+vue+mongodb实现前后端交互">
-<meta property="og:url" content="http://www.dukevs.cn/nodeexpress.html">
+<meta property="og:title" content="WordPress无插件禁止登陆admin用户名账户">
+<meta property="og:url" content="http://www.dukevs.cn/wordpressadmincont">
 <meta property="og:site_name" content="duek">
-<meta property="og:description" content="node+express+vue+mongodb实现前后端交互准备用vue-cli脚手架生成生12npm install -g @vue/cliinit &amp;lt;template&amp;gt; &amp;lt;app-name&amp;gt; 从一个远程模板生成一个项目 (遗留 API, 依赖 `@vue/cli-init`)">
+<meta property="og:description" content="WordPress无插件禁止登陆admin用户名账户早些时候如果我们有创建WordPress站点的时候默认是需要创建admin用户名的，包括我们一些公司的老的企业网站，他们默认都还是这个用户名。但是由于安全的考虑，准备将屏蔽用户名是admin的登录和扫描，不过如果我们是新WordPress建站的，应该不会用admin用户名。安装向导是可以设置自定义用户名。 12345678910111213141">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-15T16:25:39.829Z">
+<meta property="og:updated_time" content="2018-06-20T14:27:47.585Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="node+express+vue+mongodb实现前后端交互">
-<meta name="twitter:description" content="node+express+vue+mongodb实现前后端交互准备用vue-cli脚手架生成生12npm install -g @vue/cliinit &amp;lt;template&amp;gt; &amp;lt;app-name&amp;gt; 从一个远程模板生成一个项目 (遗留 API, 依赖 `@vue/cli-init`)">
+<meta name="twitter:title" content="WordPress无插件禁止登陆admin用户名账户">
+<meta name="twitter:description" content="WordPress无插件禁止登陆admin用户名账户早些时候如果我们有创建WordPress站点的时候默认是需要创建admin用户名的，包括我们一些公司的老的企业网站，他们默认都还是这个用户名。但是由于安全的考虑，准备将屏蔽用户名是admin的登录和扫描，不过如果我们是新WordPress建站的，应该不会用admin用户名。安装向导是可以设置自定义用户名。 12345678910111213141">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://www.dukevs.cn/nodeexpress.html"/>
+  <link rel="canonical" href="http://www.dukevs.cn/wordpressadmincont"/>
 
 
 
 
 
-  <title>node+express+vue+mongodb实现前后端交互 | duek</title>
+  <title>WordPress无插件禁止登陆admin用户名账户 | duek</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.dukevs.cn/nodeexpress.html">
+    <link itemprop="mainEntityOfPage" href="http://www.dukevs.cn/wordpressadmincont">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="duke blog">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">node+express+vue+mongodb实现前后端交互</h1>
+          <h1 class="post-title" itemprop="name headline">WordPress无插件禁止登陆admin用户名账户</h1>
         
 
         <div class="post-meta">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-16T00:22:52+08:00">
-                2018-06-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-20T22:15:07+08:00">
+                2018-06-20
               </time>
             
 
@@ -313,9 +313,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/nodeexpress.html#comments" itemprop="discussionUrl">
+                <a href="/wordpressadmincont#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="nodeexpress.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="wordpressadmincont" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -343,7 +343,10 @@
       
 
       
-        <h1 id="node-express-vue-mongodb实现前后端交互"><a href="#node-express-vue-mongodb实现前后端交互" class="headerlink" title="node+express+vue+mongodb实现前后端交互"></a>node+express+vue+mongodb实现前后端交互</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h4 id="用vue-cli脚手架生成生"><a href="#用vue-cli脚手架生成生" class="headerlink" title="用vue-cli脚手架生成生"></a>用vue-cli脚手架生成生</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br><span class="line">init &lt;template&gt; &lt;app-name&gt; 从一个远程模板生成一个项目 (遗留 API, 依赖 `@vue/cli-init`)</span><br></pre></td></tr></table></figure>
+        <h2 id="WordPress无插件禁止登陆admin用户名账户"><a href="#WordPress无插件禁止登陆admin用户名账户" class="headerlink" title="WordPress无插件禁止登陆admin用户名账户"></a>WordPress无插件禁止登陆admin用户名账户</h2><p>早些时候如果我们有创建WordPress站点的时候默认是需要创建admin用户名的，包括我们一些公司的老的企业网站，他们默认都还是这个用户名。但是由于安全的考虑，准备将屏蔽用户名是admin的登录和扫描，不过如果我们是新WordPress建站的，应该不会用admin用户名。安装向导是可以设置自定义用户名。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//WP禁止admin用户名</span><br><span class="line">add_filter( <span class="string">'wp_authenticate'</span>, <span class="string">'wp_no_admin_user'</span> );</span><br><span class="line"><span class="keyword">function</span> wp_no_admin_user(<span class="variable">$user</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$user</span> == <span class="string">'admin'</span>)&#123;</span><br><span class="line"><span class="built_in">exit</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">add_filter(<span class="string">'sanitize_user'</span>, <span class="string">'wp_sanitize_user_no_admin'</span>,10,3);</span><br><span class="line"><span class="keyword">function</span> wp_sanitize_user_no_admin(<span class="variable">$username</span>, <span class="variable">$raw_username</span>, <span class="variable">$strict</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$raw_username</span> == <span class="string">'admin'</span> || <span class="variable">$username</span> == <span class="string">'admin'</span>)&#123;</span><br><span class="line"><span class="built_in">exit</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> <span class="variable">$username</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>将代码加入到当前主题Functions.php文件中。就可以屏蔽如果用admin输入用户名登入账户。</p>
+
       
     </div>
     
@@ -360,7 +363,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/node-express-vue-mongodb/" rel="tag"># node, express, vue, mongodb</a>
+            <a href="/tags/wordpress/" rel="tag"># wordpress</a>
           
         </div>
       
@@ -373,8 +376,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/githubdelet.html" rel="next" title="Github删除所有提交历史记录">
-                <i class="fa fa-chevron-left"></i> Github删除所有提交历史记录
+              <a href="/phpencounterederror" rel="next" title="PHP 7.1 的 A non-numeric value encountered 错误和解决方法">
+                <i class="fa fa-chevron-left"></i> PHP 7.1 的 A non-numeric value encountered 错误和解决方法
               </a>
             
           </div>
@@ -383,8 +386,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/secondcate.html" rel="prev" title="WordPress 技巧：强制设置二级分类">
-                WordPress 技巧：强制设置二级分类 <i class="fa fa-chevron-right"></i>
+              <a href="/hexodisqus" rel="prev" title="hexo 添加disqus评论系统">
+                hexo 添加disqus评论系统 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -472,7 +475,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -485,7 +488,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -525,7 +528,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#node-express-vue-mongodb实现前后端交互"><span class="nav-number">1.</span> <span class="nav-text">node+express+vue+mongodb实现前后端交互</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用vue-cli脚手架生成生"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">用vue-cli脚手架生成生</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#WordPress无插件禁止登陆admin用户名账户"><span class="nav-number">1.</span> <span class="nav-text">WordPress无插件禁止登陆admin用户名账户</span></a></li></ol></div>
             
 
           </div>
@@ -696,9 +699,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://www.dukevs.cn/nodeexpress.html';
-          this.page.identifier = 'nodeexpress.html';
-          this.page.title = 'node+express+vue+mongodb实现前后端交互';
+          this.page.url = 'http://www.dukevs.cn/wordpressadmincont';
+          this.page.identifier = 'wordpressadmincont';
+          this.page.title = 'WordPress无插件禁止登陆admin用户名账户';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://www-dukevs-cn.disqus.com/embed.js';

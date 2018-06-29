@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="wordpress," />
+  <meta name="keywords" content="node, express, vue, mongodb," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="WordPress 技巧：强制设置二级分类如果你博客的分类只有两级，为了防止设置错误，可以在 WordPress 后台分类设置页面，设置父级分类下拉菜单只显示第一层，代码很简单： 123456add_filter(&apos;taxonomy_parent_dropdown_args&apos;, function($args)&amp;#123;	if(is_admin())&amp;#123;		$args[&apos;depth&apos;]	=">
-<meta name="keywords" content="wordpress">
+<meta name="description" content="node+express+vue+mongodb实现前后端交互准备用vue-cli脚手架生成生12npm install -g @vue/cliinit &amp;lt;template&amp;gt; &amp;lt;app-name&amp;gt; 从一个远程模板生成一个项目 (遗留 API, 依赖 `@vue/cli-init`)">
+<meta name="keywords" content="node, express, vue, mongodb">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WordPress 技巧：强制设置二级分类">
-<meta property="og:url" content="http://www.dukevs.cn/secondcate.html">
+<meta property="og:title" content="node+express+vue+mongodb实现前后端交互">
+<meta property="og:url" content="http://www.dukevs.cn/nodeexpress">
 <meta property="og:site_name" content="duek">
-<meta property="og:description" content="WordPress 技巧：强制设置二级分类如果你博客的分类只有两级，为了防止设置错误，可以在 WordPress 后台分类设置页面，设置父级分类下拉菜单只显示第一层，代码很简单： 123456add_filter(&apos;taxonomy_parent_dropdown_args&apos;, function($args)&amp;#123;	if(is_admin())&amp;#123;		$args[&apos;depth&apos;]	=">
+<meta property="og:description" content="node+express+vue+mongodb实现前后端交互准备用vue-cli脚手架生成生12npm install -g @vue/cliinit &amp;lt;template&amp;gt; &amp;lt;app-name&amp;gt; 从一个远程模板生成一个项目 (遗留 API, 依赖 `@vue/cli-init`)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-23T12:07:04.051Z">
+<meta property="og:updated_time" content="2018-06-15T16:25:39.829Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WordPress 技巧：强制设置二级分类">
-<meta name="twitter:description" content="WordPress 技巧：强制设置二级分类如果你博客的分类只有两级，为了防止设置错误，可以在 WordPress 后台分类设置页面，设置父级分类下拉菜单只显示第一层，代码很简单： 123456add_filter(&apos;taxonomy_parent_dropdown_args&apos;, function($args)&amp;#123;	if(is_admin())&amp;#123;		$args[&apos;depth&apos;]	=">
+<meta name="twitter:title" content="node+express+vue+mongodb实现前后端交互">
+<meta name="twitter:description" content="node+express+vue+mongodb实现前后端交互准备用vue-cli脚手架生成生12npm install -g @vue/cliinit &amp;lt;template&amp;gt; &amp;lt;app-name&amp;gt; 从一个远程模板生成一个项目 (遗留 API, 依赖 `@vue/cli-init`)">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://www.dukevs.cn/secondcate.html"/>
+  <link rel="canonical" href="http://www.dukevs.cn/nodeexpress"/>
 
 
 
 
 
-  <title>WordPress 技巧：强制设置二级分类 | duek</title>
+  <title>node+express+vue+mongodb实现前后端交互 | duek</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.dukevs.cn/secondcate.html">
+    <link itemprop="mainEntityOfPage" href="http://www.dukevs.cn/nodeexpress">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="duke blog">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">WordPress 技巧：强制设置二级分类</h1>
+          <h1 class="post-title" itemprop="name headline">node+express+vue+mongodb实现前后端交互</h1>
         
 
         <div class="post-meta">
@@ -294,7 +294,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-16T22:57:41+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-16T00:22:52+08:00">
                 2018-06-16
               </time>
             
@@ -313,9 +313,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/secondcate.html#comments" itemprop="discussionUrl">
+                <a href="/nodeexpress#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="secondcate.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="nodeexpress" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -343,8 +343,7 @@
       
 
       
-        <h1 id="WordPress-技巧：强制设置二级分类"><a href="#WordPress-技巧：强制设置二级分类" class="headerlink" title="WordPress 技巧：强制设置二级分类"></a>WordPress 技巧：强制设置二级分类</h1><p>如果你博客的分类只有两级，为了防止设置错误，可以在 WordPress 后台分类设置页面，设置父级分类下拉菜单只显示第一层，代码很简单：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">add_filter(<span class="string">'taxonomy_parent_dropdown_args'</span>, <span class="keyword">function</span>(<span class="variable">$args</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span>(is_admin())&#123;</span><br><span class="line">		<span class="variable">$args</span>[<span class="string">'depth'</span>]	= 1;</span><br><span class="line">		<span class="built_in">return</span> <span class="variable">$args</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <h1 id="node-express-vue-mongodb实现前后端交互"><a href="#node-express-vue-mongodb实现前后端交互" class="headerlink" title="node+express+vue+mongodb实现前后端交互"></a>node+express+vue+mongodb实现前后端交互</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h4 id="用vue-cli脚手架生成生"><a href="#用vue-cli脚手架生成生" class="headerlink" title="用vue-cli脚手架生成生"></a>用vue-cli脚手架生成生</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br><span class="line">init &lt;template&gt; &lt;app-name&gt; 从一个远程模板生成一个项目 (遗留 API, 依赖 `@vue/cli-init`)</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -361,7 +360,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/wordpress/" rel="tag"># wordpress</a>
+            <a href="/tags/node-express-vue-mongodb/" rel="tag"># node, express, vue, mongodb</a>
           
         </div>
       
@@ -374,8 +373,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/nodeexpress.html" rel="next" title="node+express+vue+mongodb实现前后端交互">
-                <i class="fa fa-chevron-left"></i> node+express+vue+mongodb实现前后端交互
+              <a href="/githubdelet" rel="next" title="Github删除所有提交历史记录">
+                <i class="fa fa-chevron-left"></i> Github删除所有提交历史记录
               </a>
             
           </div>
@@ -384,8 +383,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/linktable.html" rel="prev" title="WordPress 技巧：创建博客时不创建 links 表">
-                WordPress 技巧：创建博客时不创建 links 表 <i class="fa fa-chevron-right"></i>
+              <a href="/secondcate" rel="prev" title="WordPress 技巧：强制设置二级分类">
+                WordPress 技巧：强制设置二级分类 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -473,7 +472,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -486,7 +485,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -526,7 +525,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WordPress-技巧：强制设置二级分类"><span class="nav-number">1.</span> <span class="nav-text">WordPress 技巧：强制设置二级分类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#node-express-vue-mongodb实现前后端交互"><span class="nav-number">1.</span> <span class="nav-text">node+express+vue+mongodb实现前后端交互</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用vue-cli脚手架生成生"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">用vue-cli脚手架生成生</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -697,9 +696,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://www.dukevs.cn/secondcate.html';
-          this.page.identifier = 'secondcate.html';
-          this.page.title = 'WordPress 技巧：强制设置二级分类';
+          this.page.url = 'http://www.dukevs.cn/nodeexpress';
+          this.page.identifier = 'nodeexpress';
+          this.page.title = 'node+express+vue+mongodb实现前后端交互';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://www-dukevs-cn.disqus.com/embed.js';

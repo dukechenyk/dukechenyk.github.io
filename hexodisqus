@@ -85,7 +85,7 @@
 <meta name="keywords" content="hexo ,disqus">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo 添加disqus评论系统">
-<meta property="og:url" content="http://www.dukevs.cn/hexodisqus.html">
+<meta property="og:url" content="http://www.dukevs.cn/hexodisqus">
 <meta property="og:site_name" content="duek">
 <meta property="og:description" content="hexo 添加disqus评论系统123可以用到的评论系统有挺多的，多说，disqus等，这里只mark下disqus，disqus 的添加跟主题有关，因为hexo自带disqus，所以添加起来非常简单，这里讲下默认的主题landscape 和 上面演示的主题maupassant">
 <meta property="og:locale" content="zh-Hans">
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://www.dukevs.cn/hexodisqus.html"/>
+  <link rel="canonical" href="http://www.dukevs.cn/hexodisqus"/>
 
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.dukevs.cn/hexodisqus.html">
+    <link itemprop="mainEntityOfPage" href="http://www.dukevs.cn/hexodisqus">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="duke blog">
@@ -313,9 +313,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/hexodisqus.html#comments" itemprop="discussionUrl">
+                <a href="/hexodisqus#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="hexodisqus.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="hexodisqus" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -374,7 +374,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/wordpressadmincont.html" rel="next" title="WordPress无插件禁止登陆admin用户名账户">
+              <a href="/wordpressadmincont" rel="next" title="WordPress无插件禁止登陆admin用户名账户">
                 <i class="fa fa-chevron-left"></i> WordPress无插件禁止登陆admin用户名账户
               </a>
             
@@ -384,7 +384,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/woocommens.html" rel="prev" title="WooCommerce 是什么？">
+              <a href="/woocommens" rel="prev" title="WooCommerce 是什么？">
                 WooCommerce 是什么？ <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -473,7 +473,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -486,7 +486,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -697,8 +697,8 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://www.dukevs.cn/hexodisqus.html';
-          this.page.identifier = 'hexodisqus.html';
+          this.page.url = 'http://www.dukevs.cn/hexodisqus';
+          this.page.identifier = 'hexodisqus';
           this.page.title = 'hexo 添加disqus评论系统';
         };
         var d = document, s = d.createElement('script');
