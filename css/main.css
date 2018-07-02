@@ -2014,7 +2014,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff7c01;
+  background: #7f8830;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2137,6 +2137,9 @@ pre .javascript .function {
 .footer {
   font-size: 14px;
   color: #999;
+  background-image: url("/images/background.png");
+  background-repeat: repeat;
+  background-size: contain;
 }
 .footer img {
   border: none;
@@ -3355,4 +3358,9 @@ pre .javascript .function {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background-image: url("/images/background.png");
+  background-attachment: fixed;
+  background-repeat: repeat;
 }
