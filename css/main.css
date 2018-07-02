@@ -2014,7 +2014,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7f8830;
+  background: #ffffba;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2137,7 +2137,7 @@ pre .javascript .function {
 .footer {
   font-size: 14px;
   color: #999;
-  background-image: url("/images/background.png");
+  background-image: url("/images/pattern-bg.png");
   background-repeat: repeat;
   background-size: contain;
 }
