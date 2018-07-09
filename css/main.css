@@ -1889,7 +1889,6 @@ pre .javascript .function {
   padding: 20px 10px;
   color: #999;
   text-align: center;
-  margin-top: 10px;
 }
 .site-overview-wrap {
   overflow: hidden;
@@ -2021,7 +2020,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0953c4;
+  background: #206560;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3367,7 +3366,6 @@ pre .javascript .function {
   }
 }
 body {
-  background-attachment: fixed;
   background-repeat: repeat;
   background: -webkit-linear-gradient(180deg, #fff1eb, #ace0f9);
   background: linear-gradient(180deg, #fff1eb, #ace0f9);
