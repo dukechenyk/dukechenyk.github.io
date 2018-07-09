@@ -2021,7 +2021,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #58ff90;
+  background: #ff2166;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3367,7 +3367,9 @@ pre .javascript .function {
   }
 }
 body {
-  background-image: url("/images/background.png");
   background-attachment: fixed;
   background-repeat: repeat;
+  background: -webkit-linear-gradient(180deg, #fff1eb, #ace0f9);
+  background: linear-gradient(180deg, #fff1eb, #ace0f9);
+  background: #fff1eb; /* fallback for old browsers */
 }
