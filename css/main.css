@@ -2020,7 +2020,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #83d9ff;
+  background: #3b13ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3367,7 +3367,7 @@ pre .javascript .function {
 }
 body {
   background-attachment: fixed;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background: -webkit-linear-gradient(180deg, #fff1eb, #ace0f9);
   background: linear-gradient(180deg, #fff1eb, #ace0f9);
 }
