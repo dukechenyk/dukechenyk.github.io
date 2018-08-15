@@ -4,6 +4,42 @@
 
     
   <url>
+    <loc>http://www.dukevs.cn/vuedesign1.html</loc>
+    <lastmod>2018-08-14T07:54:37.322Z</lastmod>
+    <data>
+        <display>
+        <title>vue学习篇章一</title>
+        <pubTime>2018-08-13T02:53:18.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>study</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.dukevs.cn/nodejsstudy.html</loc>
+    <lastmod>2018-07-30T14:35:35.881Z</lastmod>
+    <data>
+        <display>
+        <title>node.js 学习</title>
+        <pubTime>2018-07-30T06:49:05.000Z</pubTime>
+        
+        <tag>node js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.dukevs.cn/rj45.html</loc>
     <lastmod>2018-07-17T03:57:01.765Z</lastmod>
     <data>
@@ -127,28 +163,6 @@
 
     
   <url>
-    <loc>http://www.dukevs.cn/GoogleRanking.html</loc>
-    <lastmod>2018-07-09T07:49:41.815Z</lastmod>
-    <data>
-        <display>
-        <title>30个影响Goolge Ranking得分的因素</title>
-        <pubTime>2018-06-29T03:17:49.000Z</pubTime>
-        
-        <tag>google</tag>
-         
-        <tag>google ranking</tag>
-         
-         
-           
-             
-              <breadCrumb title="seo" url="http://www.dukevs.cn/categories/seo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.dukevs.cn/whatswordpress.html</loc>
     <lastmod>2018-07-09T06:48:13.085Z</lastmod>
     <data>
@@ -157,30 +171,6 @@
         <pubTime>2018-07-09T02:07:14.000Z</pubTime>
         
         <tag>wordpress</tag>
-         
-         
-           
-             
-              <breadCrumb title="wordpress" url="http://www.dukevs.cn/categories/wordpress/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.dukevs.cn/woocommens.html</loc>
-    <lastmod>2018-07-05T03:50:23.530Z</lastmod>
-    <data>
-        <display>
-        <title>WooCommerce 是什么？</title>
-        <pubTime>2018-06-23T12:04:51.000Z</pubTime>
-        
-        <tag>wordpress</tag>
-         
-        <tag>woocommerce</tag>
-         
-        <tag>b2c</tag>
          
          
            
@@ -215,69 +205,6 @@
 
     
   <url>
-    <loc>http://www.dukevs.cn/nodeexpress.html</loc>
-    <lastmod>2018-07-05T03:49:21.984Z</lastmod>
-    <data>
-        <display>
-        <title>node+express+vue+mongodb实现前后端交互</title>
-        <pubTime>2018-06-15T16:22:52.000Z</pubTime>
-        
-        <tag>node</tag>
-         
-        <tag>express</tag>
-         
-        <tag>vue</tag>
-         
-        <tag>mongodb</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.dukevs.cn/mdlanguage.html</loc>
-    <lastmod>2018-07-05T03:49:14.171Z</lastmod>
-    <data>
-        <display>
-        <title>hexo下的md语法</title>
-        <pubTime>2018-07-01T07:16:06.000Z</pubTime>
-        
-        <tag>github</tag>
-         
-        <tag>hexo</tag>
-         
-        <tag>md</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.dukevs.cn/hexodisqus.html</loc>
-    <lastmod>2018-07-05T03:48:56.474Z</lastmod>
-    <data>
-        <display>
-        <title>hexo 添加disqus评论系统</title>
-        <pubTime>2018-06-20T15:18:20.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>disqus</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.dukevs.cn/wordpressadmincont.html</loc>
     <lastmod>2018-07-03T08:44:32.284Z</lastmod>
     <data>
@@ -298,21 +225,6 @@
 
     
     
-    
-  <url>
-    <loc>http://www.dukevs.cn/seocontent.html</loc>
-    <lastmod>2018-06-29T07:22:01.633Z</lastmod>
-    <data>
-        <display>
-        <title>seocontent</title>
-        <pubTime>2018-06-29T07:22:01.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://www.dukevs.cn/defaulecon.html</loc>
