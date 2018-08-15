@@ -2020,7 +2020,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #04c8f2;
+  background: #98770b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3368,6 +3368,5 @@ pre .javascript .function {
 body {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-color: #ace0f9;
-  background-color: #ace0f9;
+  background-color: #f1f1f1;
 }

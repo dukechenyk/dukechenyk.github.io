@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="duek blog">
 <meta property="og:description" content="##【vue学习】使用vue-cli脚手架工具搭建vue-webpack项目 对于Vue.js来说，如果你想要快速开始，那么只需要在你的html中引入一个标签，加上CDN的地址即可。但是，这并不算是一个完整的vue实际应用。在实际应用中，我们必须要一系列的工具，包括：模块化，转译，预处理，热加载，静态检测和自动化测试等。对于一个需要长期维护和大型的项目而言，这些工具是必不可少的，但是尝试配置初始化">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-14T07:54:37.322Z">
+<meta property="og:updated_time" content="2018-08-15T07:09:21.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue学习篇章一">
 <meta name="twitter:description" content="##【vue学习】使用vue-cli脚手架工具搭建vue-webpack项目 对于Vue.js来说，如果你想要快速开始，那么只需要在你的html中引入一个标签，加上CDN的地址即可。但是，这并不算是一个完整的vue实际应用。在实际应用中，我们必须要一系列的工具，包括：模块化，转译，预处理，热加载，静态检测和自动化测试等。对于一个需要长期维护和大型的项目而言，这些工具是必不可少的，但是尝试配置初始化">
@@ -363,6 +363,27 @@
       
         <p>##【vue学习】使用vue-cli脚手架工具搭建vue-webpack项目</p>
 <p>对于Vue.js来说，如果你想要快速开始，那么只需要在你的html中引入一个<script>标签，加上CDN的地址即可。但是，这并不算是一个完整的vue实际应用。在实际应用中，我们必须要一系列的工具，包括：模块化，转译，预处理，热加载，静态检测和自动化测试等。对于一个需要长期维护和大型的项目而言，这些工具是必不可少的，但是尝试配置初始化这些很痛苦.这就是我们发布vue官方提供的脚手架工具的原因，一个简单的构建工具，通过几个默认的步骤帮助你快速的构建Vue.js项目。</p>
+<h3 id="一、vue-cli脚手架的搭建步骤"><a href="#一、vue-cli脚手架的搭建步骤" class="headerlink" title="一、vue-cli脚手架的搭建步骤"></a>一、vue-cli脚手架的搭建步骤</h3><p>首先，确定你的电脑上已经安装了nodejs，可以使用npm包管理器安装环境，如果还没有安装node环境，可以直接去<a href="www.node.js">node.js</a>官网下载，然后点击安装（下一步下一步的傻瓜式安装）。</p>
+<p>1） 打开cmd命令窗口，切换到你要新建项目的文件夹下，此时可使用node -v检查node的版本，如果出现版本号则node已安装。</p>
+<p><img src="/images/node-v.jpg" alt="检查node版本"></p>
+<p><strong>这里需要说明下，因为在官网下载安装node.js后，就已经自带npm（包管理工具）了，另需要注意的是npm的版本最好是3.x.x以上，以免对后续产生影响。</strong></p>
+<p>相同的使用npm -v命令来查看npm版本好，这边我就不把图po出来了</p>
+<p>2） 安装淘宝镜像，打开命令行工具，把这个（npm install -g cnpm –registry= <a href="https://registry.npm.taobao.org）复制（这里要手动复制就是用鼠标右键那个，具体为啥不多解释），安装这里是因为我们用的npm的服务器是外国，有的时候我们安装“依赖”的时候很很慢很慢超级慢，所以就用这个cnpm来安装我们说需要的“依赖”。安装完成之后输入">https://registry.npm.taobao.org）复制（这里要手动复制就是用鼠标右键那个，具体为啥不多解释），安装这里是因为我们用的npm的服务器是外国，有的时候我们安装“依赖”的时候很很慢很慢超级慢，所以就用这个cnpm来安装我们说需要的“依赖”。安装完成之后输入</a> cnpm -v，如果出现相应的版本号，则说明安装成功。</p>
+<p>3） 安装webpack，打开命令行工具输入：npm install webpack -g，安装完成之后输入 webpack -v，如果出现相应的版本号，则说明安装成功。</p>
+<p><img src="/images/webpack-v.jpg" alt="检查webpack版本"></p>
+<p>4)  安装vue-cli脚手架构建工具，打开命令行工具输入：npm install vue-cli -g，安装完成之后输入 vue -V（注意这里是大写的“V”），如果出现相应的版本号，则说明安装成功。</p>
+<p><img src="/images/vue-v.jpg" alt="检查vue版本"></p>
+<h3 id="二、通过以上四步，我们需要准备的环境和工具都准备好了，接下来就开始使用vue-cli来构建项目"><a href="#二、通过以上四步，我们需要准备的环境和工具都准备好了，接下来就开始使用vue-cli来构建项目" class="headerlink" title="二、通过以上四步，我们需要准备的环境和工具都准备好了，接下来就开始使用vue-cli来构建项目"></a>二、通过以上四步，我们需要准备的环境和工具都准备好了，接下来就开始使用vue-cli来构建项目</h3><p>1)  在硬盘上找一个文件夹放工程用的。这里有两种方式指定到相关目录：①cd 目录路径 ②如果以安装git的，在相关目录右键选择Git Bash Here</p>
+<p>2)  安装vue脚手架输入：vue init webpack exprice ，注意这里的“exprice” 是项目的名称可以说是随便的起名，但是需要主要的是“不能用中文”。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">$ vue init webpack exprice --------------------- 这个是那个安装vue脚手架的命令</span><br><span class="line">This will install Vue 2.x version of the template. ---------------------这里说明将要创建一个vue 2.x版本的项目</span><br><span class="line">For Vue 1.x use: vue init webpack<span class="comment">#1.0 exprice</span></span><br><span class="line">? Project name (exprice) ---------------------项目名称</span><br><span class="line">? Project name exprice</span><br><span class="line">? Project description (A Vue.js project) ---------------------项目描述</span><br><span class="line">? Project description A Vue.js project</span><br><span class="line">? Author Datura --------------------- 项目创建者</span><br><span class="line">? Author Datura</span><br><span class="line">? Vue build (Use arrow keys)</span><br><span class="line">? Vue build standalone</span><br><span class="line">? Install vue-router? (Y/n) --------------------- 是否安装Vue路由，也就是以后是spa（但页面应用需要的模块）</span><br><span class="line">? Install vue-router? Yes</span><br><span class="line">? Use ESLint to lint your code? (Y/n) n ---------------------是否启用eslint检测规则，这里个人建议选no</span><br><span class="line">? Use ESLint to lint your code? No</span><br><span class="line">? Setup unit tests with Karma + Mocha? (Y/n)</span><br><span class="line">? Setup unit tests with Karma + Mocha? Yes</span><br><span class="line">? Setup e2e tests with Nightwatch? (Y/n)</span><br><span class="line">? Setup e2e tests with Nightwatch? Yes</span><br><span class="line">vue-cli · Generated <span class="string">"exprice"</span>.</span><br><span class="line">To get started: --------------------- 这里说明如何启动这个服务</span><br><span class="line"><span class="built_in">cd</span> exprice</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+<p>4)  cd 命令进入创建的工程目录，首先cd exprice（这里是自己建工程的名字）；</p>
+<p>5)  安装项目依赖：npm install，因为自动构建过程中已存在package.json文件，所以这里直接安装依赖就行。不要从国内镜像cnpm安装(会导致后面缺了很多依赖库)，但是但是如果真的安装“个把”小时也没成功那就用：cnpm install 吧</p>
+<p>6)  安装 vue 路由模块 vue-router 和网络请求模块 vue-resource，输入：cnpm install vue-router vue-resource –save。</p>
+<p><code>创建完成的目录如下</code></p>
+<p><img src="/images/projectposion.jpg" alt="检查project目录"></p>
+<p>7)  启动项目，输入：npm run dev。服务启动成功后浏览器会默认打开一个“欢迎页面”，如下图：</p>
+<p><img src="/images/vueopen.jpg" alt="检查hello"></p>
+<p><strong>注意：这里是默认服务启动的是本地的8080端口，所以请确保你的8080端口不被别的程序所占用。</strong></p>
 </script></p>
       
     </div>
@@ -561,7 +582,7 @@
               
               
               <div class="site-state-item site-state-categories">
-                <a href="/wordpress/index.html">
+                <a href="/shopfiy/index.html">
                   <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
