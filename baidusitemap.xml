@@ -4,14 +4,16 @@
 
     
   <url>
-    <loc>http://www.dukevs.cn/Jspackage.html</loc>
-    <lastmod>2018-08-15T07:42:25.531Z</lastmod>
+    <loc>http://www.dukevs.cn/vuedesign1.html</loc>
+    <lastmod>2018-08-15T07:58:00.587Z</lastmod>
     <data>
         <display>
-        <title>项目中常用的js封装</title>
-        <pubTime>2018-08-15T07:27:06.000Z</pubTime>
+        <title>vue学习篇章一</title>
+        <pubTime>2018-08-13T02:53:18.000Z</pubTime>
         
-        <tag>javascript</tag>
+        <tag>vue</tag>
+         
+        <tag>study</tag>
          
          
            
@@ -21,16 +23,14 @@
 
     
   <url>
-    <loc>http://www.dukevs.cn/vuedesign1.html</loc>
-    <lastmod>2018-08-15T07:13:52.320Z</lastmod>
+    <loc>http://www.dukevs.cn/Jspackage.html</loc>
+    <lastmod>2018-08-15T07:42:25.531Z</lastmod>
     <data>
         <display>
-        <title>vue学习篇章一</title>
-        <pubTime>2018-08-13T02:53:18.000Z</pubTime>
+        <title>项目中常用的js封装</title>
+        <pubTime>2018-08-15T07:27:06.000Z</pubTime>
         
-        <tag>vue</tag>
-         
-        <tag>study</tag>
+        <tag>javascript</tag>
          
          
            
