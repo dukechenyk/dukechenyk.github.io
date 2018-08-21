@@ -63,15 +63,13 @@
             <h1 id="WordPress-技巧：强制设置二级分类"><a href="#WordPress-技巧：强制设置二级分类" class="headerlink" title="WordPress 技巧：强制设置二级分类"></a>WordPress 技巧：强制设置二级分类</h1><p>如果你博客的分类只有两级，为了防止设置错误，可以在 WordPress 后台分类设置页面，设置父级分类下拉菜单只显示第一层，代码很简单：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">add_filter(<span class="string">'taxonomy_parent_dropdown_args'</span>, <span class="keyword">function</span>(<span class="variable">$args</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span>(is_admin())&#123;</span><br><span class="line">		<span class="variable">$args</span>[<span class="string">'depth'</span>]	= 1;</span><br><span class="line">		<span class="built_in">return</span> <span class="variable">$args</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
                 <source type="audio/mpeg" src="">
             </audio>
             
                 <ul id="audio-list" style="display:none">
                     
-                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
-                    
-                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                        <li title='0' data-url='http://p9u8fqrca.bkt.clouddn.com/saygoodbye.mp3'></li>
                     
                 </ul>
             
@@ -89,6 +87,10 @@
 
 
     </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#WordPress-技巧：强制设置二级分类"><span class="toc-number">1.</span> <span class="toc-text">WordPress 技巧：强制设置二级分类</span></a></li></ol>
+        </div>
     
 </div>
 

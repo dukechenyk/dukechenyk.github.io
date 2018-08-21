@@ -63,15 +63,13 @@
             <h2 id="WordPress-技巧：创建博客时不创建-links-表"><a href="#WordPress-技巧：创建博客时不创建-links-表" class="headerlink" title="WordPress 技巧：创建博客时不创建 links 表"></a>WordPress 技巧：创建博客时不创建 links 表</h2><p>WordPress 默认还有 links 表，但是现在友情链接都用得很少，我们可以再在多站点管理，如何在创建博客的时候不创建这个表呢？</p>
 <h3 id="写个插件，把下面的程序-copy-进去即可："><a href="#写个插件，把下面的程序-copy-进去即可：" class="headerlink" title="写个插件，把下面的程序 copy 进去即可："></a>写个插件，把下面的程序 copy 进去即可：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">add_filter(<span class="string">'dbdelta_create_queries'</span>, <span class="keyword">function</span>(<span class="variable">$cqueries</span>)&#123;</span><br><span class="line">    <span class="variable">$table_names</span>    = array_keys(<span class="variable">$cqueries</span>);</span><br><span class="line"></span><br><span class="line">    foreach (<span class="variable">$table_names</span> as <span class="variable">$table_name</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(strpos(<span class="variable">$table_name</span>, <span class="string">'links'</span>))&#123;</span><br><span class="line">            <span class="built_in">unset</span>(<span class="variable">$cqueries</span>[<span class="variable">$table_name</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> <span class="variable">$cqueries</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
                 <source type="audio/mpeg" src="">
             </audio>
             
                 <ul id="audio-list" style="display:none">
                     
-                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
-                    
-                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                        <li title='0' data-url='http://p9u8fqrca.bkt.clouddn.com/saygoodbye.mp3'></li>
                     
                 </ul>
             
@@ -89,6 +87,10 @@
 
 
     </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#WordPress-技巧：创建博客时不创建-links-表"><span class="toc-number">1.</span> <span class="toc-text">WordPress 技巧：创建博客时不创建 links 表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#写个插件，把下面的程序-copy-进去即可："><span class="toc-number">1.1.</span> <span class="toc-text">写个插件，把下面的程序 copy 进去即可：</span></a></li></ol></li></ol>
+        </div>
     
 </div>
 

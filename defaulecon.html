@@ -76,15 +76,13 @@
 <p>最后是：系统的默认主题常量 WP_DEFAULT_THEME。</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
                 <source type="audio/mpeg" src="">
             </audio>
             
                 <ul id="audio-list" style="display:none">
                     
-                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
-                    
-                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                        <li title='0' data-url='http://p9u8fqrca.bkt.clouddn.com/saygoodbye.mp3'></li>
                     
                 </ul>
             
@@ -102,6 +100,10 @@
 
 
     </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#每天一个WordPress文件：wp-includes-default-constants"><span class="toc-number">1.</span> <span class="toc-text">每天一个WordPress文件：wp-includes/default-constants</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wp-initial-constants-函数"><span class="toc-number">2.</span> <span class="toc-text">wp_initial_constants() 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-定义了这个和文件大小的常量，自己不用去算了，直接用就好了："><span class="toc-number">2.1.</span> <span class="toc-text">1. 定义了这个和文件大小的常量，自己不用去算了，直接用就好了：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-定义了和时间有关的常量，也别去算了，直接用就好了："><span class="toc-number">2.2.</span> <span class="toc-text">2. 定义了和时间有关的常量，也别去算了，直接用就好了：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-定义了-WP-CONTENT-DIR-这个最常用的常量，如果-wp-config-php-中没有定义，直接定义为："><span class="toc-number">2.3.</span> <span class="toc-text">3. 定义了 WP_CONTENT_DIR 这个最常用的常量，如果 wp-config.php 中没有定义，直接定义为：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-如果全局变量-blog-id-没有设置，就设置为-1"><span class="toc-number">2.4.</span> <span class="toc-text">4. 如果全局变量 [$blog_id] 没有设置，就设置为 1.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-定义了-WP-MEMORY-LIMIT-和-WP-MAX-MEMORY-LIMIT-这两个-WordPress-运行时允许的内存。"><span class="toc-number">2.5.</span> <span class="toc-text">5. 定义了 [WP_MEMORY_LIMIT] 和 [WP_MAX_MEMORY_LIMIT] 这两个 WordPress 运行时允许的内存。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-然后-WP-DEBUG-WP-DEBUG-DISPLAY-WP-DEBUG-LOG-WP-CACHE-SCRIPT-DEBUG-MEDIA-TRASH-SHORTINIT-没有定义的话，默认都被定义为-false。"><span class="toc-number">2.6.</span> <span class="toc-text">6. 然后[WP_DEBUG], [WP_DEBUG_DISPLAY], [WP_DEBUG_LOG], [WP_CACHE], [SCRIPT_DEBUG], [MEDIA_TRASH], [SHORTINIT] 没有定义的话，默认都被定义为 false。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-最后定义-WP-FEATURE-BETTER-PASSWORDS-默认为：-true，就是系统会建议用户是强度更好的密码的。"><span class="toc-number">2.7.</span> <span class="toc-text">7. 最后定义 WP_FEATURE_BETTER_PASSWORDS 默认为： true，就是系统会建议用户是强度更好的密码的。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wp-plugin-directory-constants-函数"><span class="toc-number">3.</span> <span class="toc-text">wp_plugin_directory_constants() 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wp-cookie-constants-函数"><span class="toc-number">4.</span> <span class="toc-text">wp_cookie_constants() 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wp-ssl-constants-函数"><span class="toc-number">5.</span> <span class="toc-text">wp_ssl_constants() 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wp-functionality-constants-函数"><span class="toc-number">6.</span> <span class="toc-text">wp_functionality_constants() 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wp-templating-constants-函数"><span class="toc-number">7.</span> <span class="toc-text">wp_templating_constants() 函数</span></a></li></ol>
+        </div>
     
 </div>
 

@@ -65,15 +65,13 @@
 <p>方法2</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;%--在网页中添加一个图片，待会就能用鼠标滚轮控制此图片的缩放--%&gt;</span><br><span class="line">    &lt;img id=<span class="string">"myimage"</span> src=<span class="string">"<span class="variable">$&#123;ctx&#125;</span>/images/jiaju.png"</span> alt=<span class="string">"my image"</span> /&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        //添加鼠标滚轮事件处理代码</span><br><span class="line">        var myimage = document.getElementById(<span class="string">"myimage"</span>);</span><br><span class="line">        <span class="keyword">if</span> (myimage.addEventListener) &#123;</span><br><span class="line">            // IE9, Chrome, Safari, Opera</span><br><span class="line">            myimage.addEventListener(<span class="string">"mousewheel"</span>, MouseWheelHandler, <span class="literal">false</span>);</span><br><span class="line">            // Firefox</span><br><span class="line">            myimage.addEventListener(<span class="string">"DOMMouseScroll"</span>, MouseWheelHandler, <span class="literal">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        // IE 6/7/8</span><br><span class="line">        <span class="keyword">else</span> myimage.attachEvent(<span class="string">"onmousewheel"</span>, MouseWheelHandler);</span><br><span class="line">        //为了让不同浏览器都能支持的处理做法,我们将对Firefox的detail值取反然后返回1或者-1的其中一个</span><br><span class="line">        <span class="keyword">function</span> MouseWheelHandler(e) &#123;</span><br><span class="line">            // cross-browser wheel delta</span><br><span class="line">            var e = window.event || e; // old IE support</span><br><span class="line">            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));</span><br><span class="line">            //现在我们直接决定图片的大小范围。以下代码将图片的宽度范围设置在50-800个像素之间</span><br><span class="line">            myimage.style.width = Math.max(50, Math.min(800, myimage.width + (30 * delta))) + <span class="string">"px"</span>;</span><br><span class="line">            // 最后一点，我们在方法中返回<span class="literal">false</span>是为了终止标准的鼠标滚轮事件处理，以防它上下滑动网页</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
                 <source type="audio/mpeg" src="">
             </audio>
             
                 <ul id="audio-list" style="display:none">
                     
-                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
-                    
-                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                        <li title='0' data-url='http://p9u8fqrca.bkt.clouddn.com/saygoodbye.mp3'></li>
                     
                 </ul>
             
@@ -91,6 +89,10 @@
 
 
     </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Js-鼠标滚动出发图片放大缩小效果"><span class="toc-number">1.</span> <span class="toc-text">Js 鼠标滚动出发图片放大缩小效果</span></a></li></ol>
+        </div>
     
 </div>
 
