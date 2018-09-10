@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.dukevs.cn/"/>
-  <updated>2018-08-15T08:27:22.640Z</updated>
+  <updated>2018-09-10T03:49:31.854Z</updated>
   <id>http://www.dukevs.cn/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pageimages</title>
+    <link href="http://www.dukevs.cn/pageimages.html"/>
+    <id>http://www.dukevs.cn/pageimages.html</id>
+    <published>2018-09-10T03:49:31.000Z</published>
+    <updated>2018-09-10T03:49:31.854Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue学习之新手训练1</title>
+    <link href="http://www.dukevs.cn/vuestudy2.html"/>
+    <id>http://www.dukevs.cn/vuestudy2.html</id>
+    <published>2018-08-27T02:13:16.000Z</published>
+    <updated>2018-08-27T08:09:49.688Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="不使用vue-cli构建简单的项目结构"><a href="#不使用vue-cli构建简单的项目结构" class="headerlink" title="不使用vue-cli构建简单的项目结构"></a>不使用vue-cli构建简单的项目结构</h2><p>本篇文章作为vue项目学习的开始,主要是熟悉项目的编译工作流程,案例灰常简单!<br>1.首先建立如下图的简易目录结构:</p><p><img src="/images/vueproject.jpg" alt="vue项目文件"></p><p>2.cd /project 进入项目目录,也就是vwpro目录<br>执行: npm init<br>安装webpack: npm install –save-dev webpack<br>安装vue2.0: npm install –save vue<br>安装babel,编译es6: npm install –save-dev babel-core babel-loader babel-preset-env<br>解析vue组件和.vue的文件: npm install –save-dev vue-loader vue-template-compiler<br>解析css: npm install –save-dev css-loader file-loader</p><p>3.我们在webpack.congfig.js文件中配置项目<br>这里是我的配置:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var path = require(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">    entry:<span class="string">'./src/main.js'</span>,//入口文件</span><br><span class="line">    //输出</span><br><span class="line">    output:&#123;</span><br><span class="line">        path:path.resolve(__dirname,<span class="string">'./dist'</span>),</span><br><span class="line">        publicPath:<span class="string">'/dist/'</span>,</span><br><span class="line">        filename:<span class="string">'index.js'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    module:&#123;</span><br><span class="line">        rules:[</span><br><span class="line">            //解析vue文件</span><br><span class="line">            &#123;<span class="built_in">test</span>:/\.vue$/,loader:<span class="string">'vue-loader'</span>&#125;,</span><br><span class="line">            //用babel解析js文件 排除模块安装目录的文件</span><br><span class="line">            &#123;<span class="built_in">test</span>: /\.js$/, loader: <span class="string">'babel-loader'</span>,exclude: /node_modules/&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>今后要习惯npm XXX执行指令,在我们的package.json中设置一下启动命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"dev"</span>: <span class="string">"webpack"</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p>4.编写几个简单页面</p><p>APP.vue:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">        &lt;p&gt;&#123;&#123;msg&#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="built_in">export</span> default&#123;</span><br><span class="line">        <span class="function"><span class="title">data</span></span>()&#123;</span><br><span class="line">            <span class="built_in">return</span>&#123;</span><br><span class="line">                msg:<span class="string">'Hello everyone!'</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">    *&#123;</span><br><span class="line">        color: green;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure><p>main.js:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import Vue from <span class="string">'vue'</span>;</span><br><span class="line">import App from <span class="string">'./APP.vue'</span>;</span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">    el:<span class="string">'#app'</span>,</span><br><span class="line">    render:h=&gt;h(App)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>index.html:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div id=<span class="string">"app"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;script src=<span class="string">"./dist/index.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><p>5.执行:npm run dev<br>ok,如果这里报错了,没关系,根据报错去修复问题<br>我这里报错如下:</p><p><img src="" alt=""></p><p>根据提示,执行指令: npm install webpack-cli -D (-D的意思是在package.json中把它保存为开发依赖；也可以使用–save-dev)<br>ok,再次执行 npm run dev<br>好了,我们可以看到生成了dist/index.js文件,在之前的index.html中我们已经引入了此文件.<br>那么我可以双击执行下index.html打开网页,如下:<br><img src="" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;不使用vue-cli构建简单的项目结构&quot;&gt;&lt;a href=&quot;#不使用vue-cli构建简单的项目结构&quot; class=&quot;headerlink&quot; title=&quot;不使用vue-cli构建简单的项目结构&quot;&gt;&lt;/a&gt;不使用vue-cli构建简单的项目结构&lt;/h2&gt;&lt;p&gt;本篇
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="http://www.dukevs.cn/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>项目中常用的js封装</title>
