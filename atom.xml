@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.dukevs.cn/"/>
-  <updated>2018-09-10T05:59:00.184Z</updated>
+  <updated>2018-09-10T06:00:10.831Z</updated>
   <id>http://www.dukevs.cn/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://www.dukevs.cn/pageimages.html"/>
     <id>http://www.dukevs.cn/pageimages.html</id>
     <published>2018-09-10T03:49:31.000Z</published>
-    <updated>2018-09-10T05:59:00.184Z</updated>
+    <updated>2018-09-10T06:00:10.831Z</updated>
     
-    <content type="html"><![CDATA[<p>WebP（发音weppy)，是一种同时提供了有损压缩与无损压缩（可逆压缩）的图片文件格式，派生自视频编码格式VP8，被认为是WebM多媒体格式的姊妹项目，是由Google在购买On2 Technologies后发展出来，以BSD授权条款发布。不过好像这种格式的图片在Safari和firefox浏览器下不被识别，可以用这个<a href="https://cloudconvert.com/" target="_blank" rel="noopener">在线的图片转换工具</a>来对图片进行格式转换。</p><p><img src="/images/cloudconvert.jpg" alt="在线图片转换工具"></p><p>这个在线图片格式转换提供了丰富的转换格式：</p><p><img src="/images/cloudconvertchange.jpg" alt="图片转换功能"></p><p>知乎上有一篇文章对WebP、 PNG、JPG 做了个比对，有兴趣的可以点进去看看。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="关于图片格式"><a href="#关于图片格式" class="headerlink" title="关于图片格式"></a>关于图片格式</h2><p>WebP（发音weppy)，是一种同时提供了有损压缩与无损压缩（可逆压缩）的图片文件格式，派生自视频编码格式VP8，被认为是WebM多媒体格式的姊妹项目，是由Google在购买On2 Technologies后发展出来，以BSD授权条款发布。不过好像这种格式的图片在Safari和firefox浏览器下不被识别，可以用这个<a href="https://cloudconvert.com/" target="_blank" rel="noopener">在线的图片转换工具</a>来对图片进行格式转换。</p><p><img src="/images/cloudconvert.jpg" alt="在线图片转换工具"></p><p>这个在线图片格式转换提供了丰富的转换格式：</p><p><img src="/images/cloudconvertchange.jpg" alt="图片转换功能"></p><p>知乎上有一篇文章对WebP、 PNG、JPG 做了个比对，有兴趣的可以点进去看看。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;WebP（发音weppy)，是一种同时提供了有损压缩与无损压缩（可逆压缩）的图片文件格式，派生自视频编码格式VP8，被认为是WebM多媒体格式的姊妹项目，是由Google在购买On2 Technologies后发展出来，以BSD授权条款发布。不过好像这种格式的图片在Safa
+        &lt;h2 id=&quot;关于图片格式&quot;&gt;&lt;a href=&quot;#关于图片格式&quot; class=&quot;headerlink&quot; title=&quot;关于图片格式&quot;&gt;&lt;/a&gt;关于图片格式&lt;/h2&gt;&lt;p&gt;WebP（发音weppy)，是一种同时提供了有损压缩与无损压缩（可逆压缩）的图片文件格式，派生自视频编码格式
       
     
     </summary>
