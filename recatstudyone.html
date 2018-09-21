@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>duek blog - 爱猫，爱代码，爱生活</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="wordpress,"> 
+    <meta name="description" content="这里不光有我的知识，也有大家的知识，希望大家能够在我的博客中找到自己需要的。,"> 
+    <meta name="author" content="duke chen"> 
+    <link rel="alternative" href="atom.xml" title="duek blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.ico"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8691406134231910",
+        enable_page_level_ads: true
+      });
+    </script>
+
+</head>
+
+<body class="loading">
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">前端三大框架之一React入门教程一</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">前端三大框架之一React入门教程一</h1>
+        <div class="stuff">
+            <span>九月 21, 2018</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/React/">React</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p>相信大家对框架这个词都很熟悉吧，我一直喜欢js原生来开发，但是目前都要求工作效率，所有使用框架或者是库会使我们开发更加方便和快速，甚至一个人干十个人的活。。</p>
+<p>框架优点：</p>
+<blockquote>
+<p> 1.方便开发、快速写功能<br> 2.统一开发方式<br> 3.调试、测试方便</p>
+</blockquote>
+<p>前端三大框架：<br>   Angular.js-前端三大框架之1<br>　　vue.js-前端三大框架之2<br>　　react.js-前端三大框架之3</p>
+<p>大家都知道，我们web开发会和后台配合，之前不分前后台，一直是一起，后来为了方便和高效，就分离了。</p>
+<p>  MVC：前后台分离<br>  M-Model 模型：数据 后台<br>  V-View 视图：表现层 前台<br>  C-Controller 控制器：业务逻辑</p>
+<p>mvc很多衍生概念：mvvc、mvvp、mvn、mvvcp等，其中angular和vue都是这一类。</p>
+<p>但是今天主讲的不是他俩，是目前比较火的react，这个一般适用于中大型项目，当核心框架来使用，而且可以和别的框架完美的配合。</p>
+<p>不啰嗦，直接开始正题React：<br>重点：组件、状态<br>　　核心：状态</p>
+<blockquote>
+<p>1.JSX(babel、browser)<br>　　JSX：可以把HTML直接写JS里<br>2.react<br>　　React特点：虚拟DOM</p>
+</blockquote>
+<p>react主要就是使用jsx语法，是白了就是在js中直接编写html，是不是很方便很溜。。下面直接开始写法：</p>
+<p>使用react首先需要引三个文件：<br>　　browser.js 它的作用是使浏览器支持babel<br>　　react.js 这个不用说，react主体文件<br>　　react-dom.js 这个是react的虚拟DOM的文件编译dom的</p>
+<p>1.定义组件——组件（这个就用到了ES6中的class的写法）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class 名字 extends React.Component&#123;</span><br><span class="line">　　constructor(...args)&#123;</span><br><span class="line">　　　super(...args);</span><br><span class="line">　　&#125;</span><br><span class="line">　　<span class="function"><span class="title">render</span></span>()&#123;</span><br><span class="line">　　　<span class="built_in">return</span> &lt;span&gt;aaa&lt;/span&gt;; //<span class="built_in">return</span>出去你要在页面展示的标签</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.使用组件<br>就跟标签一样用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">　　ReactDOM.render(</span><br><span class="line">　　　&lt;span&gt;111&lt;/span&gt;, //可以直接写标签，（渲染什么东西）</span><br><span class="line">　　　oDiv　　（要放到哪里）</span><br><span class="line">　　);</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">　　　&lt;Comp/&gt;, //也可以使用class，注意，使用的时候直接把class当做标签来用。</span><br><span class="line">　　　oDiv</span><br><span class="line">　　);</span><br></pre></td></tr></table></figure>
+<p>比如先写一个简单的例子吧：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/browser.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/react.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/react-dom.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/babel"</span>&gt;</span><br><span class="line">        class Box extends React.Component&#123;</span><br><span class="line">            constructor(...args)&#123;</span><br><span class="line">                super(...args)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="title">render</span></span>()&#123;</span><br><span class="line">                <span class="built_in">return</span> &lt;div&gt; //注意 最外层元素有且只有一个（必须有，而且只能有一个）</span><br><span class="line">                    &lt;span&gt;我的名字是李鹏&lt;/span&gt;&lt;br/&gt;</span><br><span class="line">                    &lt;span&gt;我今年24岁&lt;/span&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        window.onload=<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">            var oDiv=document.getElementById(<span class="string">"div1"</span>);</span><br><span class="line">            ReactDOM.render(</span><br><span class="line">                    &lt;Box/&gt;, //注意：需要和上面class的名字一样</span><br><span class="line">                    oDiv</span><br><span class="line">                )</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">"div1"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>注意：定义的时候 render出去的最外层元素有且只有一个（必须有，而且只能有一个）使用的时候直接把组件名字当做标签来用，需要和上面class的名字一样。<br>那么有人会说了，那么能往组件身上存放一些数据吗？答案是可以，<br>使用的时候，直接往组件标签身上加入属性即可，定义的时候使用就直接调用，注意是在this.props的身上：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Box extends React.Component&#123;</span><br><span class="line">            constructor(...args)&#123;</span><br><span class="line">                super(...args)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="title">render</span></span>()&#123;</span><br><span class="line">                <span class="built_in">return</span> &lt;div&gt;</span><br><span class="line">                    &lt;span&gt;我的名字是&#123;this.props.name&#125;&lt;/span&gt;&lt;br/&gt;</span><br><span class="line">                    &lt;span&gt;我今年&#123;this.props.age&#125;岁&lt;/span&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        window.onload=<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">            var oDiv=document.getElementById(<span class="string">"div1"</span>);</span><br><span class="line">            ReactDOM.render(</span><br><span class="line">                    &lt;Box name=<span class="string">"李鹏"</span> age=<span class="string">"24"</span>/&gt;,</span><br><span class="line">                    oDiv</span><br><span class="line">                )</span><br><span class="line">        &#125;;</span><br></pre></td></tr></table></figure>
+<p>那么react比如我往一个元素节点身上加入数据怎么做，正常一个组件中的数据，不可能是不变的吧，肯定是从后台过来的，这就关系到状态的变化。<br>注意：状态是活的，会变化的，怎么用呢？<br>　　定义：constructor里面——this.state={};<br>　　变化：方法里面——this.setState({});</p>
+<p>使用的时候：直接用模板即可:{} 注意是单括号。比如：<br><span>输入框输入的是：{this.state.value}</span><br>在React中怎么往组件this身上加入一些数据呢？<br>答案：使用 this.state={value:’’,name:’’} 注意是={} 一个json 多了就往后加</p>
+<blockquote>
+<p>class Box extends React.Component{<br>            constructor(…args){<br>                super(…args);<br>                this.state={value:’’};<br>            }<br>        }</p>
+</blockquote>
+<p>正常我们修改this的属性，直接改就行，但是react中你要修改必须设置状态：this.setState({this.value=’’,this.name=’’});</p>
+<blockquote>
+<p>this.setState({<br>    value:ev.target.value<br>});</p>
+</blockquote>
+<p>那么怎么在React组件中加入事件呢，直接加即可，不过注意：<br>比如：正常的 onclick 我们要写成 onClick，正常的onchange 写成 onChange 等。</p>
+<p>那么组件中事件怎绑定函数呢？直接告诉你吧：onChange={this.fn.bind(this)} 注意加上bind，为了防止this指向错乱。<br>比如写一个吧：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/browser.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/react.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/react-dom.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/babel"</span>&gt;</span><br><span class="line">        class Box extends React.Component&#123;</span><br><span class="line">            constructor(...args)&#123;</span><br><span class="line">                super(...args);</span><br><span class="line">                this.state=&#123;value:<span class="string">''</span>&#125;;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            fn(ev)&#123;</span><br><span class="line">                this.setState(&#123;</span><br><span class="line">                    value:ev.target.value</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="title">render</span></span>()&#123;</span><br><span class="line">                <span class="built_in">return</span> &lt;div&gt;</span><br><span class="line">                    &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> onChange=&#123;this.fn.bind(this)&#125; /&gt;  </span><br><span class="line">                    &lt;span&gt;输入框输入的是：&#123;this.state.value&#125;&lt;/span&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        window.onload=<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">            var oDiv=document.getElementById(<span class="string">"div1"</span>);</span><br><span class="line">            ReactDOM.render(</span><br><span class="line">                    &lt;Box/&gt;,</span><br><span class="line">                    oDiv</span><br><span class="line">                )</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">"div1"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>下面就写一个比较简单的例子吧，用react做一个时钟吧：<br>不过介绍这个之前要介绍几个东西，因为做时钟的话，肯定要用定时器吧，间隔是1000，也就是1s，所以也没会有一个间隔，这样不完美，正常我们写的话，肯定直接先把函数调用一遍吧，但是在react中不行，因为组件是有生存周期的，如果你在组件没有渲染到页面就直接调用，那样是没办法的，因为代码是一步一步往下走的，所以介绍几个东西吧：</p>
+<p>　　componentWillMount()        创建之前<br>　　componentDidMount()         创建之后</p>
+<p>　　componentWillUpdate()       更新之前<br>　　componentDidUpdate()        更新之后</p>
+<p>　　componentWillUnmount()      卸载之前<br>　　componentWillReceiveProps() 组件参数更新</p>
+<p>直接看例子吧：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/browser.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/react.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/react-dom.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/babel"</span>&gt;</span><br><span class="line">        class Close extends React.Component&#123;</span><br><span class="line">            constructor(...args)&#123;</span><br><span class="line">                super(...args);</span><br><span class="line">                this.state=&#123;</span><br><span class="line">                    h:0,</span><br><span class="line">                    m:0,</span><br><span class="line">                    s:0</span><br><span class="line">                &#125;;</span><br><span class="line">                setInterval(()=&gt;&#123;</span><br><span class="line">                    this.fn();</span><br><span class="line">                &#125;,1000)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            toDub(a)&#123;</span><br><span class="line">                <span class="built_in">return</span> a&lt;10?<span class="string">"0"</span>+a:a+<span class="string">''</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="title">componentDidMount</span></span>()&#123;  //在组件创建之后直接调用这个方法一次，省的页面出现00:00:00的情况</span><br><span class="line">                this.fn();  </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="title">fn</span></span>()&#123;</span><br><span class="line">                var oDate=new Date();</span><br><span class="line">                this.setState(&#123;</span><br><span class="line">                        h:this.toDub(oDate.getHours()),</span><br><span class="line">                        m:this.toDub(oDate.getMinutes()),</span><br><span class="line">                        s:this.toDub(oDate.getSeconds())</span><br><span class="line">                    &#125;)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="title">render</span></span>()&#123;</span><br><span class="line">                <span class="built_in">return</span> &lt;div&gt;</span><br><span class="line">                    &lt;span&gt;&#123;this.state.h&#125;&lt;/span&gt;:</span><br><span class="line">                    &lt;span&gt;&#123;this.state.m&#125;&lt;/span&gt;:</span><br><span class="line">                    &lt;span&gt;&#123;this.state.s&#125;&lt;/span&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        window.onload=<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">            var oDiv=document.querySelector(<span class="string">"#div1"</span>);</span><br><span class="line">            ReactDOM.render(</span><br><span class="line">                    &lt;Close/&gt;,</span><br><span class="line">                    oDiv</span><br><span class="line">                )</span><br><span class="line">        &#125;;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">"div1"</span>&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>以上，基本把react框架中的创建组件，使用组件，以及组件身上使用属性，以及状态都简单的说了一下，那么工作中很多时候，我们都会从后台获得一组数据，然后把数据的每一项放到一个标签中，那么在react中该怎么做呢？</p>
+<p>比如说有这样一组数据：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">constructor(...args)&#123;</span><br><span class="line">        super(...args);</span><br><span class="line"></span><br><span class="line">        //this.arr=[1, 5, 8, 9];</span><br><span class="line">        this.state=&#123;arr: [12, 5, 8, 9]&#125;;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p>首先，肯定有人会想到：我直接render出去对应数量的标签，然后把数据通过模板放进去，但是我们不可能手动写很多标签把每一项数据填进去，然后把标签render出去吧，而且数据个数你也不知道，还是变化的，所以我们可以直接循环创建，然后存到一个数组中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">render</span></span>()&#123;</span><br><span class="line">        var result=[];</span><br><span class="line">        var arr=this.state.arr;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">          result.push(&lt;Item key=&#123;i&#125; value=&#123;arr[i]&#125;/&gt;); //这个Item标签是一个小的组件，我们把数据放到属性身上吧。</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">return</span> &lt;ul&gt;</span><br><span class="line">          &lt;input <span class="built_in">type</span>=<span class="string">"button"</span> value=<span class="string">"按钮"</span> onClick=&#123;this.fn.bind(this)&#125; /&gt; //为了看看状态变化了，页面DOM有没有直接循环加上</span><br><span class="line"></span><br><span class="line">。</span><br><span class="line">          &#123;result&#125;</span><br><span class="line">        &lt;/ul&gt;;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//其中Item标签是一个小的组件：</span><br><span class="line">class Item extends React.Component&#123;</span><br><span class="line">      constructor(...args)&#123;</span><br><span class="line">        super(...args);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="title">render</span></span>()&#123;</span><br><span class="line">        <span class="built_in">return</span> &lt;li&gt;&#123;this.props.value&#125;&lt;/li&gt;;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码意思就是说，我先申明一个数组，然后通过循环把我们从后台获得的数据放到一个标签中，并且push到数组中去，最后把数组render出去，不过要放到模板里面，不能直接把数组render出去，{存放标签的数组名}，那么很多人会问，那组件标签上面的key是什么东西呢，这个你就把他理解错id就行，唯一，而且这个是必须要写的，就相当于告诉他，这个我已经创建了，不需要重复创建了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">fn</span></span>()&#123;</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">          arr: this.state.arr.concat([Math.random()])</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p>这个例子整体代码，大家看一下吧：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/browser.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/react.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">"js/react-dom.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/babel"</span>&gt;</span><br><span class="line">    class Item extends React.Component&#123;  //这个组件方便我们下面使用</span><br><span class="line">      constructor(...args)&#123;</span><br><span class="line">        super(...args);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="title">render</span></span>()&#123;</span><br><span class="line">        <span class="built_in">return</span> &lt;li&gt;&#123;this.props.value&#125;&lt;/li&gt;;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    class List extends React.Component&#123;</span><br><span class="line">      constructor(...args)&#123;</span><br><span class="line">        super(...args);</span><br><span class="line"></span><br><span class="line">        //this.arr=[12, 5, 8, 9];</span><br><span class="line">        this.state=&#123;arr: [12, 5, 8, 9]&#125;;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="title">fn</span></span>()&#123;</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">          arr: this.state.arr.concat([Math.random()])  //随便往数组最后添加一项，随机数,注意，不要使用push之类的，直接用数</span><br><span class="line"></span><br><span class="line">组拼接。下面点击测试用。</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="title">render</span></span>()&#123;</span><br><span class="line">        var result=[];</span><br><span class="line">        var arr=this.state.arr;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">          result.push(&lt;Item key=&#123;i&#125; value=&#123;arr[i]&#125;/&gt;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">return</span> &lt;ul&gt;</span><br><span class="line">          &lt;input <span class="built_in">type</span>=<span class="string">"button"</span> value=<span class="string">"按钮"</span> onClick=&#123;this.fn.bind(this)&#125; /&gt; //点击执行一个函数，让数据最后添加一项，看看数</span><br><span class="line"></span><br><span class="line">据变化了，这个组件渲染的页面变化没。</span><br><span class="line">          &#123;result&#125;</span><br><span class="line">        &lt;/ul&gt;;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    window.onload=<span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">      var oDiv=document.getElementById(<span class="string">'div1'</span>);</span><br><span class="line"></span><br><span class="line">      ReactDOM.render(</span><br><span class="line">        &lt;List /&gt;,</span><br><span class="line">        oDiv</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">"div1"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title='0' data-url='http://p9u8fqrca.bkt.clouddn.com/saygoodbye.mp3'></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='2932bdda87946e67feb6'
+        data-cs='7e435b56042628960670b3046afafcdfc7a24fe1'
+        data-r='dukechenyk.github.io'
+        data-o='dukechenyk'
+        data-a='dukechenyk'
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+            
+        </div>
+    
+</div>
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
