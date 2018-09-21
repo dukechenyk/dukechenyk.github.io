@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.dukevs.cn/"/>
-  <updated>2018-09-21T01:39:51.279Z</updated>
+  <updated>2018-09-21T06:44:43.951Z</updated>
   <id>http://www.dukevs.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>scrollspy（滚动监听）的使用方法</title>
+    <link href="http://www.dukevs.cn/scrollyuse.html"/>
+    <id>http://www.dukevs.cn/scrollyuse.html</id>
+    <published>2018-09-21T02:38:58.000Z</published>
+    <updated>2018-09-21T06:44:43.951Z</updated>
+    
+    <content type="html"><![CDATA[<p>实现功能<br>1、当滚动区域内设置的hashkey距离顶点到有效位置时，就关联设置其导航上的指定项<br>2、使用滚动监听的话，导航栏必须采用 class=”nav”的nav组件才可以。导航必须是 .nav &gt; li &gt; a 结构，并且a上href或data-target要绑定hashkey<br>3、在定义.nav组件的时候，我们需要把.nav放在另一个容器内(比如div),且该容器需要有一个id属性（与这里data-target需要设置的值相同）。</p><p>4、你需要给滚动内容的标签添加 data-spy=”scroll”属性和data-target属性，data-target与导航父级Id（一定是父级）一致</p><pre><code>data-spy 属性指明了被监听的元素，data-target属性指明滚动时需要控制的nav高亮显示</code></pre><p>6、如果监听Body的滚动，那么你必须给body添加position:relative样式</p><pre><code>如果监听的不是Body，而是其他得元素[貌似这种方式常见]，那么你需要添加三个样式：position:relative;height:500px;overflow-y:scroll;</code></pre><p>例子如下：</p><p><img src="images/scrollelement.png" alt="scrollsent"></p><p>源码分析：<br>1、原理：当滚动容器内的hashkey位置距离容器顶部只有 offset设置的值，就会设置导航中对应的href高亮<br>2、如果滚动区域是body，会将滚动区域元素标记为window（构造函数中判断）<br>this.$scrollElement = $(element).is(document.body) ? $(window) : $(element)<br>3、getScrolHeight：获取滚动容器的内容高度（包含被隐藏部分）</p><p>this.$scrollElement[0].scrollHeight || Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)</p><p>4、refresh：刷新并存储滚动容器内各hashkey的值<br>  4.1、默认用offset来获取定位值，如果滚动区域不是window则用position来获取</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!$.isWindow(this.<span class="variable">$scrollElement</span>[0])) &#123;</span><br><span class="line">offsetMethod = <span class="string">'position'</span></span><br><span class="line">offsetBase = this.<span class="variable">$scrollElement</span>.scrollTop() //获取基础高度，如果滚动区域内有不参与滚动计算的内容</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>4.2、根据导航上的hashkey来遍历获取 滚动区域内的hashkey对应的offset值：</p><p>5、process：滚动条事件触发函数，用于计算当前需要高亮那个导航菜单</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">this.<span class="variable">$body</span></span><br><span class="line"> .find(this.selector)</span><br><span class="line"> .map(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line"> var <span class="variable">$el</span> = $(this)</span><br><span class="line"> var href = <span class="variable">$el</span>.data(<span class="string">'target'</span>) || <span class="variable">$el</span>.attr(<span class="string">'href'</span>)</span><br><span class="line"> var <span class="variable">$href</span> = /^<span class="comment">#./.test(href) &amp;&amp; $(href) //获取滚动区域内的hashkey对应的元素</span></span><br><span class="line"></span><br><span class="line"> <span class="built_in">return</span> (<span class="variable">$href</span></span><br><span class="line"> &amp;&amp; <span class="variable">$href</span>.length</span><br><span class="line"> &amp;&amp; <span class="variable">$href</span>.is(<span class="string">':visible'</span>)</span><br><span class="line"> &amp;&amp; [[<span class="variable">$href</span>[offsetMethod]().top + offsetBase, href]]) || null</span><br><span class="line"> &#125;)</span><br><span class="line"> .sort(<span class="keyword">function</span> (a, b) &#123; <span class="built_in">return</span> a[0] - b[0] &#125;)</span><br><span class="line"> .each(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line"> that.offsets.push(this[0])</span><br><span class="line"> that.targets.push(this[1])</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure><p>  5.1、获取滚动容器已滚动距离：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var scrollTop    = this.<span class="variable">$scrollElement</span>.scrollTop() + this.options.offset</span><br></pre></td></tr></table></figure><p>   5.2、滚动容器可以滚动的最大高度</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (i = offsets.length; i--;) &#123;//遍历所有的offset</span><br><span class="line"> activeTarget != targets[i] //判断当前target是否等于activeTarget</span><br><span class="line"> &amp;&amp; scrollTop &gt;= offsets[i] //滚动高度&gt;i元素的offset</span><br><span class="line"> &amp;&amp; (offsets[i + 1] === undefined || scrollTop &lt; offsets[i + 1]) //i + 1元素不存在，或者i+1元素不大于滚动高度</span><br><span class="line"> &amp;&amp; this.activate(targets[i]) //设置i为当前活动项</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure><p>6、active：设置指定的导航菜单高亮<br>7、clear：清除所有高亮菜单</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;实现功能&lt;br&gt;1、当滚动区域内设置的hashkey距离顶点到有效位置时，就关联设置其导航上的指定项&lt;br&gt;2、使用滚动监听的话，导航栏必须采用 class=”nav”的nav组件才可以。导航必须是 .nav &amp;gt; li &amp;gt; a 结构，并且a上href或data-
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>前端三大框架之一React入门教程一</title>
@@ -474,33 +495,6 @@
     
     
       <category term="php" scheme="http://www.dukevs.cn/tags/php/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设置WordPress回复评论无插件微信提醒功能</title>
-    <link href="http://www.dukevs.cn/wordwechatplugin.html"/>
-    <id>http://www.dukevs.cn/wordwechatplugin.html</id>
-    <published>2018-06-19T15:21:20.000Z</published>
-    <updated>2018-07-05T03:49:58.562Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="设置WordPress回复评论无插件微信提醒功能"><a href="#设置WordPress回复评论无插件微信提醒功能" class="headerlink" title="设置WordPress回复评论无插件微信提醒功能"></a>设置WordPress回复评论无插件微信提醒功能</h2><p>如果我们在使用WordPress程序建站的时候，和网友进行互动一般是通过评论。能在第一时间给网友评论确实可以提高交互及时性。常见的我们有直接在每天看看是否有人评论，或者是用邮件提醒。但是有些时候由于服务器的问题，设置邮件提醒可能比较麻烦。这里我们可以使用微信提醒。</p><p>这里我们是使用的Server酱接口进行提醒的。</p><h3 id="第一、申请接口"><a href="#第一、申请接口" class="headerlink" title="第一、申请接口"></a>第一、申请接口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">申请账号：http://sc.ftqq.com/3.version</span><br></pre></td></tr></table></figure><p>这里我们需要申请接口。</p><h3 id="第二、添加脚本"><a href="#第二、添加脚本" class="headerlink" title="第二、添加脚本"></a>第二、添加脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//评论微信推送</span><br><span class="line"><span class="keyword">function</span> sc_send(<span class="variable">$comment_id</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="variable">$text</span> = <span class="string">'博客上有一条新的评论'</span>;</span><br><span class="line"><span class="variable">$comment</span> = get_comment(<span class="variable">$comment_id</span>);</span><br><span class="line"><span class="variable">$desp</span> = <span class="variable">$comment</span>-&gt;comment_content;</span><br><span class="line"><span class="variable">$key</span> = <span class="string">'你自己的SCKEY'</span>;</span><br><span class="line"><span class="variable">$postdata</span> = http_build_query(</span><br><span class="line">array(</span><br><span class="line"><span class="string">'text'</span> =&gt; <span class="variable">$text</span>,</span><br><span class="line"><span class="string">'desp'</span> =&gt; <span class="variable">$desp</span></span><br><span class="line">)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="variable">$opts</span> = array(<span class="string">'http'</span> =&gt;</span><br><span class="line">array(</span><br><span class="line"><span class="string">'method'</span> =&gt; <span class="string">'POST'</span>,</span><br><span class="line"><span class="string">'header'</span> =&gt; <span class="string">'Content-type: application/x-www-form-urlencoded'</span>,</span><br><span class="line"><span class="string">'content'</span> =&gt; <span class="variable">$postdata</span></span><br><span class="line">)</span><br><span class="line">);</span><br><span class="line"><span class="variable">$context</span> = stream_context_create(<span class="variable">$opts</span>);</span><br><span class="line"><span class="built_in">return</span> <span class="variable">$result</span> = file_get_contents(<span class="string">'http://sc.ftqq.com/'</span>.<span class="variable">$key</span>.<span class="string">'.send'</span>, <span class="literal">false</span>, <span class="variable">$context</span>);</span><br><span class="line">&#125;</span><br><span class="line">add_action(<span class="string">'comment_post'</span>, <span class="string">'sc_send'</span>, 19, 2);</span><br></pre></td></tr></table></figure><p>在脚本中修改我们的KEY文件，然后贴到当前WP主题的Functions.php文件中。</p><p>就这么简单。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;设置WordPress回复评论无插件微信提醒功能&quot;&gt;&lt;a href=&quot;#设置WordPress回复评论无插件微信提醒功能&quot; class=&quot;headerlink&quot; title=&quot;设置WordPress回复评论无插件微信提醒功能&quot;&gt;&lt;/a&gt;设置WordPress回复评
-      
-    
-    </summary>
-    
-      <category term="wordpress" scheme="http://www.dukevs.cn/categories/wordpress/"/>
-    
-    
-      <category term="wordpress" scheme="http://www.dukevs.cn/tags/wordpress/"/>
-    
-      <category term="wechat" scheme="http://www.dukevs.cn/tags/wechat/"/>
     
   </entry>
   
